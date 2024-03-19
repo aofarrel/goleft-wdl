@@ -1,11 +1,10 @@
 # start with Google's official golang image
-FROM golang:1.17
+FROM golang:1.21
 
 # prevent apt-get dialogs
 ENV DEBIAN_FRONTEND noninteractive
 
 # install goleft from Brent's repo
-RUN go get -u github.com/brentp/goleft/...
 RUN go install github.com/brentp/goleft/cmd/goleft@latest
 
 # install samtools-required packages

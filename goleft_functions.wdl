@@ -27,7 +27,7 @@ task indexRefGenome {
 	}
 
 	runtime {
-		docker: "ashedpotatoes/goleft-covstats:0.0.2"
+		docker: "ashedpotatoes/goleft-covstats:0.0.3"
 		preemptible: indexrefPreempt
 		disks: "local-disk " + finalDiskSize + " HDD"
 		memory: indexrefMem + "G"
@@ -111,7 +111,7 @@ task indexcovCRAM {
 	}
 	
 	runtime {
-		docker: "ashedpotatoes/goleft-covstats:0.0.2"
+		docker: "ashedpotatoes/goleft-covstats:0.0.3"
 		preemptible: indexcovPrempt
 		disks: "local-disk " + finalDiskSize + " HDD"
 		memory: indexcovMemory + "G"
@@ -193,7 +193,7 @@ task indexcovBAM {
 	}
 	
 	runtime {
-		docker: "ashedpotatoes/goleft-covstats:0.0.2"
+		docker: "ashedpotatoes/goleft-covstats:0.0.3"
 		preemptible: indexcovPrempt
 		disks: "local-disk " + finalDiskSize + " HDD"
 		memory: indexcovMemory + "G"
@@ -331,7 +331,7 @@ task covstats {
 		Int timer = read_int("duration")
 	}
 	runtime {
-		docker: "ashedpotatoes/goleft-covstats:0.0.2"
+		docker: "ashedpotatoes/goleft-covstats:0.0.3"
 		preemptible: covstatsPreempt
 		disks: "local-disk " + finalDiskSize + " HDD"
 		memory: covstatsMem + "G"
